@@ -1,18 +1,38 @@
 unit NewPascal.Base;
 
-{$mode objfpc}{$H+}
+{$mode ObjFPC}{$H+}
 
 interface
 
 uses
-  Classes, SysUtils;
+  Classes
+  ,SysUtils
+  ;
+
+const
+  Null : pointer = Nil;
 
 type
+  Int = Integer;
+
+  Float = Single;
+
+  DoubleArray = array of Double;
+
+  FloatArray = array of Float;
+
+  Objct = class;
+
+  Cloneable = interface
+    ['{98649980-45DA-459C-A6B1-0B6D6C506C93}']
+    function Clone : Objct;
+  end;
+
   Objct = class(TInterfacedObject)
   protected
-    function Clone:Objct; virtual;
+    function Clone : Objct; virtual;
   public
-    function ToString:AnsiString; override;
+    function ToString : AnsiString; override;
   end;
 
   Excptn = class(Exception)
@@ -21,6 +41,8 @@ type
   end;
 
   CloneNotSupportedException = class(Excptn);
+
+  RuntimeException = class(Excptn);
 
 implementation
 
