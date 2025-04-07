@@ -13,9 +13,19 @@ const
   Null : pointer = Nil;
 
 type
-  Int = Integer;
+  Short = SmallInt;
+
+  Int = Int32;
+
+  Long = Int64;
 
   Float = Single;
+
+  ShortArray = array of Short;
+
+  IntArray = array of Int;
+
+  LongArray = array of Long;
 
   DoubleArray = array of Double;
 
