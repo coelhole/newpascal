@@ -11,14 +11,16 @@
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2><a href="index.html">NewPascal</a></h2><ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<h2><a href="index.html">NewPascal</a></h2><ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><a href="GVUses.png">Unit dependency graph</a></li><li><a href="GVClasses.png">Classes hierarchy graph</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
 </li></ul></div><div class="content">
 <h1 class="unit">Unit NewPascal.Base</h1>
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section">Functions and Procedures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section">Variables</div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
-&nbsp;<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<p>
+Provides fundamental classes to NewPascal programming library.</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
 <ul class="useslist"><li>Classes</li><li>SysUtils</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Classes"></span><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
 <table class="classestable wide_list">
@@ -50,35 +52,87 @@
 <td class="itemname">Class&nbsp;<a class="bold" href="NewPascal.Base.RuntimeException.html"><code>RuntimeException</code></a></td>
 <td class="itemdesc">&nbsp;</td>
 </tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold" href="NewPascal.Base.IllegalArgumentException.html"><code>IllegalArgumentException</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
 <tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#SByte">SByte</a></strong> = ShortInt;</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#Short">Short</a></strong> = SmallInt;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#UShort">UShort</a></strong> = Word;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#Int">Int</a></strong> = Int32;</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#UInt">UInt</a></strong> = LongWord;</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#Long">Long</a></strong> = Int64;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#ULong">ULong</a></strong> = QWord;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#Float">Float</a></strong> = Single;</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#ByteArray">ByteArray</a></strong> = array of Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#SByteArray">SByteArray</a></strong> = array of <a href="NewPascal.Base.html#SByte">SByte</a>;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#ShortArray">ShortArray</a></strong> = array of <a href="NewPascal.Base.html#Short">Short</a>;</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#UShortArray">UShortArray</a></strong> = array of <a href="NewPascal.Base.html#UShort">UShort</a>;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#IntArray">IntArray</a></strong> = array of <a href="NewPascal.Base.html#Int">Int</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#UIntArray">UIntArray</a></strong> = array of <a href="NewPascal.Base.html#UInt">UInt</a>;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#LongArray">LongArray</a></strong> = array of <a href="NewPascal.Base.html#Long">Long</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="NewPascal.Base.html#DoubleArray">DoubleArray</a></strong> = array of Double;</code></td>
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#ULongArray">ULongArray</a></strong> = array of <a href="NewPascal.Base.html#ULong">ULong</a>;</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#DoubleArray">DoubleArray</a></strong> = array of Double;</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#FloatArray">FloatArray</a></strong> = array of <a href="NewPascal.Base.html#Float">Float</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#CurrencyArray">CurrencyArray</a></strong> = array of Currency;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#ObjctClass">ObjctClass</a></strong> = class of <a href="NewPascal.Base.Objct.html">Objct</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#ExceptnClass">ExceptnClass</a></strong> = class of <a href="NewPascal.Base.Excptn.html">Excptn</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#ErrorClass">ErrorClass</a></strong> = class of <a href="NewPascal.Base.Error.html">Error</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#CloneNotSupportedExceptionClass">CloneNotSupportedExceptionClass</a></strong> = class of <a href="NewPascal.Base.CloneNotSupportedException.html">CloneNotSupportedException</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#RuntimeExceptionClass">RuntimeExceptionClass</a></strong> = class of <a href="NewPascal.Base.RuntimeException.html">RuntimeException</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#IllegalArgumentExceptionClass">IllegalArgumentExceptionClass</a></strong> = class of <a href="NewPascal.Base.IllegalArgumentException.html">IllegalArgumentException</a>;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constants</h3>
@@ -91,28 +145,86 @@
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="SByte"></span><code><strong>SByte</strong> = ShortInt;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+an alias to <em>ShortInt</em> integer type</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="Short"></span><code><strong>Short</strong> = SmallInt;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <em>SmallInt</em> integer type</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="UShort"></span><code><strong>UShort</strong> = Word;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+an alias to <em>Word</em> integer type</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="Int"></span><code><strong>Int</strong> = Int32;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <em>Int32</em> integer type</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="UInt"></span><code><strong>UInt</strong> = LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+an alias to <em>LongWord</em> integer type</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="Long"></span><code><strong>Long</strong> = Int64;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <em>Int64</em> integer type</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ULong"></span><code><strong>ULong</strong> = QWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+an alias to <em>QWord</em> integer type</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="Float"></span><code><strong>Float</strong> = Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+an alias to <em>Single</em> floating type</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ByteArray"></span><code><strong>ByteArray</strong> = array of Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SByteArray"></span><code><strong>SByteArray</strong> = array of <a href="NewPascal.Base.html#SByte">SByte</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
@@ -126,6 +238,13 @@
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="UShortArray"></span><code><strong>UShortArray</strong> = array of <a href="NewPascal.Base.html#UShort">UShort</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="IntArray"></span><code><strong>IntArray</strong> = array of <a href="NewPascal.Base.html#Int">Int</a>;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -133,7 +252,21 @@
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="UIntArray"></span><code><strong>UIntArray</strong> = array of <a href="NewPascal.Base.html#UInt">UInt</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="LongArray"></span><code><strong>LongArray</strong> = array of <a href="NewPascal.Base.html#Long">Long</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ULongArray"></span><code><strong>ULongArray</strong> = array of <a href="NewPascal.Base.html#ULong">ULong</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
@@ -152,13 +285,64 @@
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CurrencyArray"></span><code><strong>CurrencyArray</strong> = array of Currency;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ObjctClass"></span><code><strong>ObjctClass</strong> = class of <a href="NewPascal.Base.Objct.html">Objct</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ExceptnClass"></span><code><strong>ExceptnClass</strong> = class of <a href="NewPascal.Base.Excptn.html">Excptn</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ErrorClass"></span><code><strong>ErrorClass</strong> = class of <a href="NewPascal.Base.Error.html">Error</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CloneNotSupportedExceptionClass"></span><code><strong>CloneNotSupportedExceptionClass</strong> = class of <a href="NewPascal.Base.CloneNotSupportedException.html">CloneNotSupportedException</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RuntimeExceptionClass"></span><code><strong>RuntimeExceptionClass</strong> = class of <a href="NewPascal.Base.RuntimeException.html">RuntimeException</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IllegalArgumentExceptionClass"></span><code><strong>IllegalArgumentExceptionClass</strong> = class of <a href="NewPascal.Base.IllegalArgumentException.html">IllegalArgumentException</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
 <h3 class="detail">Constants</h3>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="Null"></span><code><strong>Null</strong> : pointer = Nil;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <code>Nil</code> pointer constant</p>
+</td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>
 </span>

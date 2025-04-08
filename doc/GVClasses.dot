@@ -7,8 +7,7 @@ DiGraph Classes {
   "Objct" [href="NewPascal.Base.Objct.html"]
   "AffineTransform" -> "Objct"
   "AffineTransform" [href="NewPascal.GUI.Geom.AffineTransform.html"]
-  "Exception" -> "TObject"
-  "Excptn" -> "Exception"
+  "Excptn" -> "Objct"
   "Excptn" [href="NewPascal.Base.Excptn.html"]
   "CloneNotSupportedException" -> "Excptn"
   "CloneNotSupportedException" [href="NewPascal.Base.CloneNotSupportedException.html"]
@@ -16,4 +15,6 @@ DiGraph Classes {
   "Error" [href="NewPascal.Base.Error.html"]
   "RuntimeException" -> "Excptn"
   "RuntimeException" [href="NewPascal.Base.RuntimeException.html"]
+  "IllegalArgumentException" -> "RuntimeException"
+  "IllegalArgumentException" [href="NewPascal.Base.IllegalArgumentException.html"]
 }

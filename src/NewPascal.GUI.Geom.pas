@@ -98,7 +98,7 @@ type
                              : Double); overload;
     constructor Create(FlatMatrix : DoubleArray); overload;
     function Clone : Objct; override;
-    property Matrix : DoubleArray read GetMatrix;
+    property FlatMatrix : DoubleArray read GetMatrix;
     const
       //
       TYPE_IDENTITY            : Int = 0;
@@ -134,19 +134,30 @@ type
       APPLY_TRANSLATE          : Int = 1;
       APPLY_SCALE              : Int = 2;
       APPLY_SHEAR              : Int = 4;
+  public
+    property ScaleX : Double read M00;
+    property ScaleY : Double read M11;
+    property ShearX : Double read M01;
+    property ShearY : Double read M10;
+    property TranslateX : Double read M02;
+    property TranslateY : Double read M12;
   end;
 
 implementation
 
 constructor AffineTransform.Create;
 begin
+  inherited Create;
+
   M00 := 1.0;
   M11 := 1.0;
   M01 := 0.0;
   M10 := 0.0;
   M02 := 0.0;
   M12 := 0.0;
+
   State := AffineTransform.APPLY_IDENTITY;
+
   TransformType := AffineTransform.TYPE_IDENTITY;
 end;
 
@@ -157,25 +168,32 @@ class function AffineTransform.New(const
                          const state : Int):AffineTransform;
 begin
   Result := AffineTransform.Create;
+
   Result.M00 := m00;
   Result.M10 := m10;
   Result.M01 := m01;
   Result.M11 := m11;
   Result.M02 := m02;
   Result.M12 := m12;
+
   Result.State := state;
+
   Result.TransformType := AffineTransform.TYPE_UNKNOWN;
 end;
 
 constructor AffineTransform.Create(Tx : AffineTransform);
 begin
+  inherited Create;
+
   Self.M00 := Tx.M00;
   Self.M10 := Tx.M10;
   Self.M01 := Tx.M01;
   Self.M11 := Tx.M11;
   Self.M02 := Tx.M02;
   Self.M12 := Tx.M12;
+
   Self.State := Tx.State;
+
   Self.TransformType := Tx.TransformType;
 end;
 
@@ -227,7 +245,7 @@ end;
 
 procedure AffineTransform.StateError;
 begin
-  raise Error.Create('transform state: missing option in CASE state OF');
+  raise Error.Create('%s: transform state missing option',['StateError']);
 end;
 
 constructor AffineTransform.Create(
@@ -236,27 +254,37 @@ constructor AffineTransform.Create(
                   m02, m12
 : Double);
 begin
+  inherited Create;
+
   Self.M00 := m00;
   Self.M10 := m10;
   Self.M01 := m01;
   Self.M11 := m11;
   Self.M02 := m02;
   Self.M12 := m12;
+
   UpdateState;
 end;
 
 constructor AffineTransform.Create(FlatMatrix : DoubleArray);
 begin
+  if ( Length(FlatMatrix) <> 4 ) and ( Length(FlatMatrix) <> 6 ) then
+     raise IllegalArgumentException.Create;
+
+  inherited Create;
+
   M00 := FlatMatrix[0];
   M10 := FlatMatrix[1];
   M01 := FlatMatrix[2];
   M11 := FlatMatrix[3];
   M02 := 0.0;
   M12 := 0.0;
+
   if Length(FlatMatrix) > 5 then begin
   	M02 := FlatMatrix[4];
   	M12 := FlatMatrix[5];
   end;
+
   UpdateState;
 end;
 
