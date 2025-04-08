@@ -1,0 +1,19 @@
+DiGraph Classes {
+  "Cloneable" -> "IInterface"
+  "Cloneable" [href="NewPascal.Base.Cloneable.html"]
+  "PathIterator" -> "IInterface"
+  "PathIterator" [href="NewPascal.GUI.Geom.PathIterator.html"]
+  "Objct" -> "TInterfacedObject"
+  "Objct" [href="NewPascal.Base.Objct.html"]
+  "AffineTransform" -> "Objct"
+  "AffineTransform" [href="NewPascal.GUI.Geom.AffineTransform.html"]
+  "Exception" -> "TObject"
+  "Excptn" -> "Exception"
+  "Excptn" [href="NewPascal.Base.Excptn.html"]
+  "CloneNotSupportedException" -> "Excptn"
+  "CloneNotSupportedException" [href="NewPascal.Base.CloneNotSupportedException.html"]
+  "Error" -> "Excptn"
+  "Error" [href="NewPascal.Base.Error.html"]
+  "RuntimeException" -> "Excptn"
+  "RuntimeException" [href="NewPascal.Base.RuntimeException.html"]
+}

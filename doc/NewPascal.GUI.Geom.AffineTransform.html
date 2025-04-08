@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>NewPascal: NewPascal.GUI.Geom: Class AffineTransform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.16.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">NewPascal</a></h2><ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<span id="AffineTransform"></span><h1 class="cio">Class AffineTransform</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section"><a class="section" href="#PasDoc-Fields">Fields</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Properties</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a href="NewPascal.GUI.Geom.html">NewPascal.GUI.Geom</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type AffineTransform = class(<a class="normal" href="NewPascal.Base.Objct.html">Objct</a>, <a class="normal" href="NewPascal.Base.Cloneable.html">Cloneable</a>)</code></p>
+<h2 class="description">Description</h2>
+<div class="nodescription">No description available, ancestor Objct description follows</div><span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TInterfacedObject</li>
+<li class="ancestor"><a class="normal" href="NewPascal.Base.Objct.html">Objct</a></li>
+<li class="thisitem">AffineTransform</li></ul><h2 class="overview">Overview</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Fields</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#TYPE_IDENTITY">TYPE_IDENTITY</a></strong>            : <a href="NewPascal.Base.html#Int">Int</a> = 0;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#TYPE_TRANSLATION">TYPE_TRANSLATION</a></strong>         : <a href="NewPascal.Base.html#Int">Int</a> = 1;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#TYPE_UNIFORM_SCALE">TYPE_UNIFORM_SCALE</a></strong>       : <a href="NewPascal.Base.html#Int">Int</a> = 2;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#TYPE_GENERAL_SCALE">TYPE_GENERAL_SCALE</a></strong>       : <a href="NewPascal.Base.html#Int">Int</a> = 4;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#TYPE_MASK_SCALE">TYPE_MASK_SCALE</a></strong>          : <a href="NewPascal.Base.html#Int">Int</a> = (2 or 4);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#TYPE_FLIP">TYPE_FLIP</a></strong>                : <a href="NewPascal.Base.html#Int">Int</a> = 64;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#TYPE_QUADRANT_ROTATION">TYPE_QUADRANT_ROTATION</a></strong>   : <a href="NewPascal.Base.html#Int">Int</a> = 8;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#TYPE_GENERAL_ROTATION">TYPE_GENERAL_ROTATION</a></strong>    : <a href="NewPascal.Base.html#Int">Int</a> = 16;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#TYPE_MASK_ROTATION">TYPE_MASK_ROTATION</a></strong>       : <a href="NewPascal.Base.html#Int">Int</a> = (8 or 16);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#TYPE_GENERAL_TRANSFORM">TYPE_GENERAL_TRANSFORM</a></strong>   : <a href="NewPascal.Base.html#Int">Int</a> = 32;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="NewPascal.GUI.Geom.AffineTransform.html#M00">M00</a></strong>: Double;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="NewPascal.GUI.Geom.AffineTransform.html#M10">M10</a></strong>: Double;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="NewPascal.GUI.Geom.AffineTransform.html#M01">M01</a></strong>: Double;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="NewPascal.GUI.Geom.AffineTransform.html#M11">M11</a></strong>: Double;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="NewPascal.GUI.Geom.AffineTransform.html#M02">M02</a></strong>: Double;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="NewPascal.GUI.Geom.AffineTransform.html#M12">M12</a></strong>: Double;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="NewPascal.GUI.Geom.AffineTransform.html#State">State</a></strong>: <a href="NewPascal.Base.html#Int">Int</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#APPLY_IDENTITY">APPLY_IDENTITY</a></strong>           : <a href="NewPascal.Base.html#Int">Int</a> = 0;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#APPLY_TRANSLATE">APPLY_TRANSLATE</a></strong>          : <a href="NewPascal.Base.html#Int">Int</a> = 1;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#APPLY_SCALE">APPLY_SCALE</a></strong>              : <a href="NewPascal.Base.html#Int">Int</a> = 2;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>nested const <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#APPLY_SHEAR">APPLY_SHEAR</a></strong>              : <a href="NewPascal.Base.html#Int">Int</a> = 4;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#Create">Create</a></strong>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#Create">Create</a></strong>(Tx : <a href="NewPascal.GUI.Geom.AffineTransform.html">AffineTransform</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#Create">Create</a></strong>(const m00, m10, m01, m11, m02, m12 : <a href="NewPascal.Base.html#Float">Float</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#Create">Create</a></strong>(const m00, m10, m01, m11, m02, m12 : Double); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#Create">Create</a></strong>(flatmatrix : <a href="NewPascal.Base.html#DoubleArray">DoubleArray</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#Clone">Clone</a></strong>: <a href="NewPascal.Base.Objct.html">Objct</a>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#UpdateState">UpdateState</a></strong>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="NewPascal.GUI.Geom.AffineTransform.html#Matrix">Matrix</a></strong> : <a href="NewPascal.Base.html#DoubleArray">DoubleArray</a> read GetMatrix;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fields</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TYPE_IDENTITY"></span><code>nested const <strong>TYPE_IDENTITY</strong>            : <a href="NewPascal.Base.html#Int">Int</a> = 0;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TYPE_TRANSLATION"></span><code>nested const <strong>TYPE_TRANSLATION</strong>         : <a href="NewPascal.Base.html#Int">Int</a> = 1;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TYPE_UNIFORM_SCALE"></span><code>nested const <strong>TYPE_UNIFORM_SCALE</strong>       : <a href="NewPascal.Base.html#Int">Int</a> = 2;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TYPE_GENERAL_SCALE"></span><code>nested const <strong>TYPE_GENERAL_SCALE</strong>       : <a href="NewPascal.Base.html#Int">Int</a> = 4;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TYPE_MASK_SCALE"></span><code>nested const <strong>TYPE_MASK_SCALE</strong>          : <a href="NewPascal.Base.html#Int">Int</a> = (2 or 4);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TYPE_FLIP"></span><code>nested const <strong>TYPE_FLIP</strong>                : <a href="NewPascal.Base.html#Int">Int</a> = 64;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TYPE_QUADRANT_ROTATION"></span><code>nested const <strong>TYPE_QUADRANT_ROTATION</strong>   : <a href="NewPascal.Base.html#Int">Int</a> = 8;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TYPE_GENERAL_ROTATION"></span><code>nested const <strong>TYPE_GENERAL_ROTATION</strong>    : <a href="NewPascal.Base.html#Int">Int</a> = 16;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TYPE_MASK_ROTATION"></span><code>nested const <strong>TYPE_MASK_ROTATION</strong>       : <a href="NewPascal.Base.html#Int">Int</a> = (8 or 16);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TYPE_GENERAL_TRANSFORM"></span><code>nested const <strong>TYPE_GENERAL_TRANSFORM</strong>   : <a href="NewPascal.Base.html#Int">Int</a> = 32;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="M00"></span><code><strong>M00</strong>: Double;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="M10"></span><code><strong>M10</strong>: Double;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="M01"></span><code><strong>M01</strong>: Double;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="M11"></span><code><strong>M11</strong>: Double;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="M02"></span><code><strong>M02</strong>: Double;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="M12"></span><code><strong>M12</strong>: Double;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="State"></span><code><strong>State</strong>: <a href="NewPascal.Base.html#Int">Int</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="APPLY_IDENTITY"></span><code>nested const <strong>APPLY_IDENTITY</strong>           : <a href="NewPascal.Base.html#Int">Int</a> = 0;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="APPLY_TRANSLATE"></span><code>nested const <strong>APPLY_TRANSLATE</strong>          : <a href="NewPascal.Base.html#Int">Int</a> = 1;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="APPLY_SCALE"></span><code>nested const <strong>APPLY_SCALE</strong>              : <a href="NewPascal.Base.html#Int">Int</a> = 2;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="APPLY_SHEAR"></span><code>nested const <strong>APPLY_SHEAR</strong>              : <a href="NewPascal.Base.html#Int">Int</a> = 4;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(Tx : <a href="NewPascal.GUI.Geom.AffineTransform.html">AffineTransform</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(const m00, m10, m01, m11, m02, m12 : <a href="NewPascal.Base.html#Float">Float</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(const m00, m10, m01, m11, m02, m12 : Double); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(flatmatrix : <a href="NewPascal.Base.html#DoubleArray">DoubleArray</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clone"></span><code>function <strong>Clone</strong>: <a href="NewPascal.Base.Objct.html">Objct</a>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="UpdateState"></span><code>procedure <strong>UpdateState</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Matrix"></span><code>property <strong>Matrix</strong> : <a href="NewPascal.Base.html#DoubleArray">DoubleArray</a> read GetMatrix;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>
+</span>
+</div></div></body></html>

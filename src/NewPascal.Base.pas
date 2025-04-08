@@ -50,6 +50,8 @@ type
     constructor Create(const msg : string = '');
   end;
 
+  Error = class(Excptn);
+
   CloneNotSupportedException = class(Excptn);
 
   RuntimeException = class(Excptn);

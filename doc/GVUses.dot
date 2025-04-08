@@ -1,0 +1,9 @@
+DiGraph Uses {
+  "NewPascal.Base" -> "Classes"
+  "NewPascal.Base" -> "SysUtils"
+  "NewPascal.Base" [href="NewPascal.Base.html"]
+  "NewPascal.GUI.Geom" -> "Classes"
+  "NewPascal.GUI.Geom" -> "SysUtils"
+  "NewPascal.GUI.Geom" -> "NewPascal.Base"
+  "NewPascal.GUI.Geom" [href="NewPascal.GUI.Geom.html"]
+}
