@@ -67,8 +67,7 @@ type
     function IsDone : Boolean;
     //Moves the iterator to the next segment of the path forwards along the primary direction of traversal as long as there are more points in that direction.
     procedure Next;
-    function CurrentSegment(Coords : FloatArray)  : Int; overload;
-    function CurrentSegment(Coords : DoubleArray) : Int; overload;
+    function CurrentSegment(Coords : DoubleArray) : Int;
   end;
 
   AffineTransform = class(Objct,Cloneable)
@@ -81,7 +80,7 @@ type
                              : Double;
                        const state
                              : Int):AffineTransform;
-    function GetMatrix:DoubleArray;
+    function GetMatrix : DoubleArray;
     const
       TYPE_UNKNOWN             : Int = -1;
       HI_SHIFT                 : Int = 3;
@@ -96,12 +95,8 @@ type
     constructor Create(const m00, m10,
                              m01, m11,
                              m02, m12
-                             : Float); overload;
-    constructor Create(const m00, m10,
-                             m01, m11,
-                             m02, m12
                              : Double); overload;
-    constructor Create(flatmatrix : DoubleArray); overload;
+    constructor Create(FlatMatrix : DoubleArray); overload;
     function Clone : Objct; override;
     property Matrix : DoubleArray read GetMatrix;
     const
@@ -239,21 +234,6 @@ constructor AffineTransform.Create(
             const m00, m10,
                   m01, m11,
                   m02, m12
-: Float);
-begin
-  Self.M00 := m00;
-  Self.M10 := m10;
-  Self.M01 := m01;
-  Self.M11 := m11;
-  Self.M02 := m02;
-  Self.M12 := m12;
-  UpdateState;
-end;
-
-constructor AffineTransform.Create(
-            const m00, m10,
-                  m01, m11,
-                  m02, m12
 : Double);
 begin
   Self.M00 := m00;
@@ -265,22 +245,22 @@ begin
   UpdateState;
 end;
 
-constructor AffineTransform.Create(flatmatrix:DoubleArray);
+constructor AffineTransform.Create(FlatMatrix : DoubleArray);
 begin
-  m00 := flatmatrix[0];
-  m10 := flatmatrix[1];
-  m01 := flatmatrix[2];
-  m11 := flatmatrix[3];
-  m02 := 0.0;
-  m12 := 0.0;
-  if Length(flatmatrix) > 5 then begin
-  	m02 := flatmatrix[4];
-  	m12 := flatmatrix[5];
+  M00 := FlatMatrix[0];
+  M10 := FlatMatrix[1];
+  M01 := FlatMatrix[2];
+  M11 := FlatMatrix[3];
+  M02 := 0.0;
+  M12 := 0.0;
+  if Length(FlatMatrix) > 5 then begin
+  	M02 := FlatMatrix[4];
+  	M12 := FlatMatrix[5];
   end;
   UpdateState;
 end;
 
-function AffineTransform.GetMatrix:DoubleArray;
+function AffineTransform.GetMatrix : DoubleArray;
 begin
   Result := NIL;
   SetLength(Result,6);
