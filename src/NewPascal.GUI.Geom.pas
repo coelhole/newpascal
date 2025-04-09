@@ -269,7 +269,7 @@ end;
 constructor AffineTransform.Create(FlatMatrix : DoubleArray);
 begin
   if ( Length(FlatMatrix) <> 4 ) and ( Length(FlatMatrix) <> 6 ) then
-     raise IllegalArgumentException.Create;
+     raise IllegalArgumentException.Create('%s length: %d',['FlatMatrix',Length(FlatMatrix)]);
 
   inherited Create;
 
@@ -290,8 +290,10 @@ end;
 
 function AffineTransform.GetMatrix : DoubleArray;
 begin
-  Result := NIL;
+  Result := Null;
+
   SetLength(Result,6);
+
   Result[0] := M00;
   Result[1] := M10;
   Result[2] := M01;

@@ -87,7 +87,7 @@ type
   end;
   ObjctClass = class of Objct;
 
-  Excptn = class(Objct)
+  Throwable = class(Objct)
   private
     fmessage : string;
   public
@@ -95,21 +95,24 @@ type
     constructor Create(const msg : string; const args : array of const); overload;
     property Message : string read fmessage;
   end;
-  ExcptnClass = class of Excptn;
+  ThrowableClass = class of Throwable;
 
-  Error = class(Excptn);
+  Exceptn = class(Throwable);
+  ExceptnClass = class of Exceptn;
+
+  Error = class(Throwable);
   ErrorClass = class of Error;
 
-  CloneNotSupportedException = class(Excptn);
+  CloneNotSupportedException = class(Exceptn);
   CloneNotSupportedExceptionClass = class of CloneNotSupportedException;
 
-  RuntimeException = class(Excptn);
+  RuntimeException = class(Exceptn);
   RuntimeExceptionClass = class of RuntimeException;
 
   IllegalArgumentException = class(RuntimeException);
   IllegalArgumentExceptionClass = class of IllegalArgumentException;
 
-  ReflectiveOperationException = class(Excptn);
+  ReflectiveOperationException = class(Exceptn);
   ReflectiveOperationExceptionClass = class of ReflectiveOperationException;
 
   ClassNotFoundException = class(ReflectiveOperationException);
@@ -200,13 +203,13 @@ begin
   raise CloneNotSupportedException.Create;
 end;
 
-constructor Excptn.Create(const msg : string = '');
+constructor Throwable.Create(const msg : string = '');
 begin
   inherited Create;
   fmessage := msg;
 end;
 
-constructor Excptn.Create(const msg : string; const args : array of const);
+constructor Throwable.Create(const msg : string; const args : array of const);
 begin
   Create(Format(msg,args));
 end;
