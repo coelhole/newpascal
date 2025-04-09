@@ -16,7 +16,7 @@
 </li></ul></div><div class="content">
 <h1 class="unit">Unit NewPascal.Base</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section">Functions and Procedures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section">Variables</div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section">Variables</div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p>
 Provides fundamental classes to NewPascal programming library.</p>
@@ -55,6 +55,61 @@ Provides fundamental classes to NewPascal programming library.</p>
 <tr class="list">
 <td class="itemname">Class&nbsp;<a class="bold" href="NewPascal.Base.IllegalArgumentException.html"><code>IllegalArgumentException</code></a></td>
 <td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold" href="NewPascal.Base.ReflectiveOperationException.html"><code>ReflectiveOperationException</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold" href="NewPascal.Base.ClassNotFoundException.html"><code>ClassNotFoundException</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold" href="NewPascal.Base.IllegalAccessException.html"><code>IllegalAccessException</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold" href="NewPascal.Base.InstantiationException.html"><code>InstantiationException</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold" href="NewPascal.Base.InvocationTargetException.html"><code>InvocationTargetException</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Class&nbsp;<a class="bold" href="NewPascal.Base.NoSuchFieldException.html"><code>NoSuchFieldException</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Class&nbsp;<a class="bold" href="NewPascal.Base.NoSuchMethodException.html"><code>NoSuchMethodException</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>operator := (obj : <a href="NewPascal.Base.Objct.html">Objct</a>) str : String;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>operator <strong><a href="NewPascal.Base.html#Explicit">Explicit</a></strong>(obj : <a href="NewPascal.Base.Objct.html">Objct</a>) str : String;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>operator + (obj : <a href="NewPascal.Base.Objct.html">Objct</a>; mystr : String) str : String;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>operator + (mystr : String; obj : <a href="NewPascal.Base.Objct.html">Objct</a>) str : String;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>operator + (myint : <a href="NewPascal.Base.html#Long">Long</a>; mystr : String) str : String;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>operator + (mystr : String; myint : <a href="NewPascal.Base.html#Long">Long</a>) str : String;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>operator + (myuint : <a href="NewPascal.Base.html#ULong">ULong</a>; mystr : String) str : String;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>operator + (mystr : String; myuint : <a href="NewPascal.Base.html#ULong">ULong</a>) str : String;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
@@ -120,7 +175,7 @@ Provides fundamental classes to NewPascal programming library.</p>
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#ObjctClass">ObjctClass</a></strong> = class of <a href="NewPascal.Base.Objct.html">Objct</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="NewPascal.Base.html#ExceptnClass">ExceptnClass</a></strong> = class of <a href="NewPascal.Base.Excptn.html">Excptn</a>;</code></td>
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#ExcptnClass">ExcptnClass</a></strong> = class of <a href="NewPascal.Base.Excptn.html">Excptn</a>;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#ErrorClass">ErrorClass</a></strong> = class of <a href="NewPascal.Base.Error.html">Error</a>;</code></td>
@@ -134,14 +189,92 @@ Provides fundamental classes to NewPascal programming library.</p>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="NewPascal.Base.html#IllegalArgumentExceptionClass">IllegalArgumentExceptionClass</a></strong> = class of <a href="NewPascal.Base.IllegalArgumentException.html">IllegalArgumentException</a>;</code></td>
 </tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#ReflectiveOperationExceptionClass">ReflectiveOperationExceptionClass</a></strong> = class of <a href="NewPascal.Base.ReflectiveOperationException.html">ReflectiveOperationException</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#ClassNotFoundExceptionClass">ClassNotFoundExceptionClass</a></strong> = class of <a href="NewPascal.Base.ClassNotFoundException.html">ClassNotFoundException</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#IllegalAccessExceptionClass">IllegalAccessExceptionClass</a></strong> = class of <a href="NewPascal.Base.IllegalAccessException.html">IllegalAccessException</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#InstantiationExceptionClass">InstantiationExceptionClass</a></strong> = class of <a href="NewPascal.Base.InstantiationException.html">InstantiationException</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#InvocationTargetExceptionClass">InvocationTargetExceptionClass</a></strong> = class of <a href="NewPascal.Base.InvocationTargetException.html">InvocationTargetException</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#NoSuchFieldExceptionClass">NoSuchFieldExceptionClass</a></strong> = class of <a href="NewPascal.Base.NoSuchFieldException.html">NoSuchFieldException</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#NoSuchMethodExceptionClass">NoSuchMethodExceptionClass</a></strong> = class of <a href="NewPascal.Base.NoSuchMethodException.html">NoSuchMethodException</a>;</code></td>
+</tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constants</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><strong><a href="NewPascal.Base.html#Null">Null</a></strong> : pointer = Nil;</code></td>
+<td class="itemcode"><code><strong><a href="NewPascal.Base.html#Null">Null</a></strong> = Nil;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id=":="></span><code>operator := (obj : <a href="NewPascal.Base.Objct.html">Objct</a>) str : String;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Explicit"></span><code>operator <strong>Explicit</strong>(obj : <a href="NewPascal.Base.Objct.html">Objct</a>) str : String;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>operator + (obj : <a href="NewPascal.Base.Objct.html">Objct</a>; mystr : String) str : String;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>operator + (mystr : String; obj : <a href="NewPascal.Base.Objct.html">Objct</a>) str : String;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>operator + (myint : <a href="NewPascal.Base.html#Long">Long</a>; mystr : String) str : String;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>operator + (mystr : String; myint : <a href="NewPascal.Base.html#Long">Long</a>) str : String;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>operator + (myuint : <a href="NewPascal.Base.html#ULong">ULong</a>; mystr : String) str : String;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>operator + (mystr : String; myuint : <a href="NewPascal.Base.html#ULong">ULong</a>) str : String;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
 <tr class="list">
@@ -220,77 +353,99 @@ an alias to <em>Single</em> floating type</p>
 <td class="itemcode"><span id="ByteArray"></span><code><strong>ByteArray</strong> = array of Byte;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>Byte</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="SByteArray"></span><code><strong>SByteArray</strong> = array of <a href="NewPascal.Base.html#SByte">SByte</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>SByte</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="ShortArray"></span><code><strong>ShortArray</strong> = array of <a href="NewPascal.Base.html#Short">Short</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>Short</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="UShortArray"></span><code><strong>UShortArray</strong> = array of <a href="NewPascal.Base.html#UShort">UShort</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>UShort</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="IntArray"></span><code><strong>IntArray</strong> = array of <a href="NewPascal.Base.html#Int">Int</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>Int</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="UIntArray"></span><code><strong>UIntArray</strong> = array of <a href="NewPascal.Base.html#UInt">UInt</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>UInt</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="LongArray"></span><code><strong>LongArray</strong> = array of <a href="NewPascal.Base.html#Long">Long</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>Long</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="ULongArray"></span><code><strong>ULongArray</strong> = array of <a href="NewPascal.Base.html#ULong">ULong</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>ULong</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="DoubleArray"></span><code><strong>DoubleArray</strong> = array of Double;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>Double</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="FloatArray"></span><code><strong>FloatArray</strong> = array of <a href="NewPascal.Base.html#Float">Float</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>Float</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="CurrencyArray"></span><code><strong>CurrencyArray</strong> = array of Currency;</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+an alias to <strong>array of</strong> <em>Currency</em></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -301,7 +456,7 @@ an alias to <em>Single</em> floating type</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ExceptnClass"></span><code><strong>ExceptnClass</strong> = class of <a href="NewPascal.Base.Excptn.html">Excptn</a>;</code></td>
+<td class="itemcode"><span id="ExcptnClass"></span><code><strong>ExcptnClass</strong> = class of <a href="NewPascal.Base.Excptn.html">Excptn</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
@@ -334,14 +489,63 @@ an alias to <em>Single</em> floating type</p>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ReflectiveOperationExceptionClass"></span><code><strong>ReflectiveOperationExceptionClass</strong> = class of <a href="NewPascal.Base.ReflectiveOperationException.html">ReflectiveOperationException</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ClassNotFoundExceptionClass"></span><code><strong>ClassNotFoundExceptionClass</strong> = class of <a href="NewPascal.Base.ClassNotFoundException.html">ClassNotFoundException</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IllegalAccessExceptionClass"></span><code><strong>IllegalAccessExceptionClass</strong> = class of <a href="NewPascal.Base.IllegalAccessException.html">IllegalAccessException</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="InstantiationExceptionClass"></span><code><strong>InstantiationExceptionClass</strong> = class of <a href="NewPascal.Base.InstantiationException.html">InstantiationException</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="InvocationTargetExceptionClass"></span><code><strong>InvocationTargetExceptionClass</strong> = class of <a href="NewPascal.Base.InvocationTargetException.html">InvocationTargetException</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="NoSuchFieldExceptionClass"></span><code><strong>NoSuchFieldExceptionClass</strong> = class of <a href="NewPascal.Base.NoSuchFieldException.html">NoSuchFieldException</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="NoSuchMethodExceptionClass"></span><code><strong>NoSuchMethodExceptionClass</strong> = class of <a href="NewPascal.Base.NoSuchMethodException.html">NoSuchMethodException</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
 <h3 class="detail">Constants</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="Null"></span><code><strong>Null</strong> : pointer = Nil;</code></td>
+<td class="itemcode"><span id="Null"></span><code><strong>Null</strong> = Nil;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-an alias to <code>Nil</code> pointer constant</p>
+an alias to <code>Nil</code> constant</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>

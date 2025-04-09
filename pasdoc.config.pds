@@ -40,8 +40,8 @@ OpenHTML=1
 LineBreakQuality=0
 SpecialMarkerTreatment=1
 Title=NewPascal
-VizGraphClasses=0
-VizGraphUses=0
+VizGraphClasses=1
+VizGraphUses=1
 CheckSpelling=0
 LatexGraphicsPackage=0
 

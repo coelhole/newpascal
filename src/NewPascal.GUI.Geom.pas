@@ -61,7 +61,7 @@ type
     //@returns(the winding rule)
     //@seealso(WIND_EVEN_ODD)
     //@seealso(WIND_NON_ZERO)
-    function GetWindingRule : Int;
+    function WindingRule : Int;
     //Tests if the iteration is complete.
     //@returns(@true if all the segments have been read; @false otherwise.)
     function IsDone : Boolean;

@@ -13,6 +13,20 @@ DiGraph Classes {
   "CloneNotSupportedException" [href="NewPascal.Base.CloneNotSupportedException.html"]
   "Error" -> "Excptn"
   "Error" [href="NewPascal.Base.Error.html"]
+  "ReflectiveOperationException" -> "Excptn"
+  "ReflectiveOperationException" [href="NewPascal.Base.ReflectiveOperationException.html"]
+  "ClassNotFoundException" -> "ReflectiveOperationException"
+  "ClassNotFoundException" [href="NewPascal.Base.ClassNotFoundException.html"]
+  "IllegalAccessException" -> "ReflectiveOperationException"
+  "IllegalAccessException" [href="NewPascal.Base.IllegalAccessException.html"]
+  "InstantiationException" -> "ReflectiveOperationException"
+  "InstantiationException" [href="NewPascal.Base.InstantiationException.html"]
+  "InvocationTargetException" -> "ReflectiveOperationException"
+  "InvocationTargetException" [href="NewPascal.Base.InvocationTargetException.html"]
+  "NoSuchFieldException" -> "ReflectiveOperationException"
+  "NoSuchFieldException" [href="NewPascal.Base.NoSuchFieldException.html"]
+  "NoSuchMethodException" -> "ReflectiveOperationException"
+  "NoSuchMethodException" [href="NewPascal.Base.NoSuchMethodException.html"]
   "RuntimeException" -> "Excptn"
   "RuntimeException" [href="NewPascal.Base.RuntimeException.html"]
   "IllegalArgumentException" -> "RuntimeException"
