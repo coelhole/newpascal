@@ -90,9 +90,16 @@ type
   Throwable = class(Objct)
   private
     fmessage : string;
+    fhelpcontext : Int;
   public
     constructor Create(const msg : string = ''); overload;
     constructor Create(const msg : string; const args : array of const); overload;
+    constructor Create(ResString : PString); overload;
+    constructor Create(ResString : PString; const Args : array of const); overload;
+    constructor Create(const msg : string; AHelpContext : Int); overload;
+    constructor Create(const msg : string; const Args : array of const; AHelpContext : Int); overload;
+    constructor Create(ResString: PString; AHelpContext : Int); overload;
+    constructor Create(ResString : PString; const Args: array of const; AHelpContext : Int); overload;
     property Message : string read fmessage;
   end;
   ThrowableClass = class of Throwable;
@@ -211,7 +218,48 @@ end;
 
 constructor Throwable.Create(const msg : string; const args : array of const);
 begin
-  Create(Format(msg,args));
+  inherited Create;
+  fmessage := Format(msg,args);
+end;
+
+constructor Throwable.Create(ResString: PString);
+begin
+ inherited Create;
+ fmessage := ResString^;
+end;
+
+constructor Throwable.Create(ResString : PString; const Args : array of const);
+begin
+ inherited Create;
+ fmessage := Format(ResString^,args);
+end;
+
+constructor Throwable.Create(const msg : string; AHelpContext : Int);
+begin
+ inherited Create;
+ fmessage := msg;
+ fhelpcontext := AHelpContext;
+end;
+
+constructor Throwable.Create(const msg : string; const Args : array of const; AHelpContext : Int);
+begin
+  inherited Create;
+  fmessage := Format(msg,args);
+  fhelpcontext := AHelpContext;
+end;
+
+constructor Throwable.Create(ResString : PString; AHelpContext : Int);
+begin
+  inherited Create;
+  fmessage := ResString^;
+  fhelpcontext := AHelpContext;
+end;
+
+constructor Throwable.Create(ResString : PString; const Args : array of const; AHelpContext : Int);
+begin
+  inherited Create;
+  fmessage := Format(ResString^,args);
+  fhelpcontext := AHelpContext;
 end;
 
 end.

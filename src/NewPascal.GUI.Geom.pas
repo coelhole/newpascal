@@ -80,7 +80,7 @@ type
                              : Double;
                        const state
                              : Int):AffineTransform;
-    function GetMatrix : DoubleArray;
+    function GetFlatMatrix : DoubleArray;
     const
       TYPE_UNKNOWN             : Int = -1;
       HI_SHIFT                 : Int = 3;
@@ -98,7 +98,7 @@ type
                              : Double); overload;
     constructor Create(FlatMatrix : DoubleArray); overload;
     function Clone : Objct; override;
-    property FlatMatrix : DoubleArray read GetMatrix;
+    property FlatMatrix : DoubleArray read GetFlatMatrix;
     const
       //
       TYPE_IDENTITY            : Int = 0;
@@ -288,7 +288,7 @@ begin
   UpdateState;
 end;
 
-function AffineTransform.GetMatrix : DoubleArray;
+function AffineTransform.GetFlatMatrix : DoubleArray;
 begin
   Result := Null;
 
