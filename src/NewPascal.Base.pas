@@ -11,7 +11,8 @@ uses
   ;
 
 const
-  //an alias to @nil constant
+  //An alias to @nil constant.
+  //See @url(https://wiki.freepascal.org/Nil).
   null = nil;
 
 type
@@ -79,14 +80,41 @@ type
   //an alias to @Bold(array of) @Italic(ulong)
   ULongArray = array of ulong;
 
-  //an alias to @Bold(array of) @Italic(double)
-  DoubleArray = array of double;
+  //an alias to @Bold(array of) @Italic(int8)
+  Int8Array = array of int8;
+
+  //an alias to @Bold(array of) @Italic(uint8)
+  UInt8Array = array of uint8;
+
+  //an alias to @Bold(array of) @Italic(int16)
+  Int16Array = array of int16;
+
+  //an alias to @Bold(array of) @Italic(uint16)
+  UInt16Array = array of uint16;
+
+  //an alias to @Bold(array of) @Italic(int32)
+  Int32Array = array of int32;
+
+  //an alias to @Bold(array of) @Italic(uint32)
+  UInt32Array = array of uint32;
+
+  //an alias to @Bold(array of) @Italic(int64)
+  Int64Array = array of int64;
+
+  //an alias to @Bold(array of) @Italic(uint64)
+  UInt64Array = array of uint64;
 
   //an alias to @Bold(array of) @Italic(float)
   FloatArray = array of float;
 
+  //an alias to @Bold(array of) @Italic(double)
+  DoubleArray = array of double;
+
   //an alias to @Bold(array of) @Italic(currency)
   CurrencyArray = array of currency;
+
+  //an alias to @Bold(array of) @Italic(comp)
+  CompArray = array of comp;
 
   Objct = class;
 
