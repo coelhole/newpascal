@@ -7,6 +7,8 @@ DiGraph Classes {
   "Objct" [href="NewPascal.Base.Objct.html"]
   "AffineTransform" -> "Objct"
   "AffineTransform" [href="NewPascal.GUI.Geom.AffineTransform.html"]
+  "Console" -> "Objct"
+  "Console" [href="NewPascal.IO.Console.Console.html"]
   "Throwable" -> "Objct"
   "Throwable" [href="NewPascal.Base.Throwable.html"]
   "Error" -> "Throwable"

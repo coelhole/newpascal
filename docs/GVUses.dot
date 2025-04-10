@@ -6,4 +6,8 @@ DiGraph Uses {
   "NewPascal.GUI.Geom" -> "SysUtils"
   "NewPascal.GUI.Geom" -> "NewPascal.Base"
   "NewPascal.GUI.Geom" [href="NewPascal.GUI.Geom.html"]
+  "NewPascal.IO.Console" -> "Classes"
+  "NewPascal.IO.Console" -> "SysUtils"
+  "NewPascal.IO.Console" -> "NewPascal.Base"
+  "NewPascal.IO.Console" [href="NewPascal.IO.Console.html"]
 }

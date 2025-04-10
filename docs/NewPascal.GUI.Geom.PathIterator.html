@@ -27,7 +27,9 @@
 <p>
 The PathIterator interface provides the mechanism for objects that implement the Shape interface to return the geometry of their boundary by allowing a caller to retrieve the path of that boundary a segment at a time. This interface allows these objects to retrieve the path of their boundary a segment at a time by using 1st through 3rd order Bézier curves, which are lines and quadratic or cubic Bézier splines. Multiple subpaths can be expressed by using a &quot;MOVETO&quot; segment to create a discontinuity in the geometry to move from the end of one subpath to the beginning of the next.
 
-<p>Each subpath can be closed manually by ending the last segment in the subpath on the same coordinate as the beginning &quot;MOVETO&quot; segment for that subpath or by using a &quot;CLOSE&quot; segment to append a line segment from the last point back to the first. Be aware that manually closing an outline as opposed to using a &quot;CLOSE&quot; segment to close the path might result in different line style decorations being used at the end points of the subpath. For example, the BasicStroke object uses a line &quot;JOIN&quot; decoration to connect the first and last points if a &quot;CLOSE&quot; segment is encountered, whereas simply ending the path on the same coordinate as the beginning coordinate results in line &quot;CAP&quot; decorations being used at the ends.</p>
+<p>Each subpath can be closed manually by ending the last segment in the subpath on the same coordinate as the beginning &quot;MOVETO&quot; segment for that subpath or by using a &quot;CLOSE&quot; segment to append a line segment from the last point back to the first. Be aware that manually closing an outline as opposed to using a &quot;CLOSE&quot; segment to close the path might result in different line style decorations being used at the end points of the subpath. For example, the BasicStroke object uses a line &quot;JOIN&quot; decoration to connect the first and last points if a &quot;CLOSE&quot; segment is encountered, whereas simply ending the path on the same coordinate as the beginning coordinate results in line &quot;CAP&quot; decorations being used at the ends.
+
+<p>See also: <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/geom/PathIterator.html">interface java.awt.geom.PathIterator (Java API)</a>.</p>
 <h6 class="description_section">Attributes</h6>
 <dl class="attributes">
   <dt>GUID['{975C542B-92E0-4E8D-956B-5F77F1B99F1D}']</dt>
@@ -40,7 +42,7 @@ The PathIterator interface provides the mechanism for objects that implement the
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <strong><a href="NewPascal.GUI.Geom.PathIterator.html#WindingRule">WindingRule</a></strong>: <a href="NewPascal.Base.html#Int">Int</a>;</code></td>
+<td class="itemcode"><code>function <strong><a href="NewPascal.GUI.Geom.PathIterator.html#WindingRule">WindingRule</a></strong>: <a href="NewPascal.Base.html#int">Int</a>;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
@@ -52,7 +54,7 @@ The PathIterator interface provides the mechanism for objects that implement the
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <strong><a href="NewPascal.GUI.Geom.PathIterator.html#CurrentSegment">CurrentSegment</a></strong>(Coords : <a href="NewPascal.Base.html#DoubleArray">DoubleArray</a>) : <a href="NewPascal.Base.html#Int">Int</a>;</code></td>
+<td class="itemcode"><code>function <strong><a href="NewPascal.GUI.Geom.PathIterator.html#CurrentSegment">CurrentSegment</a></strong>(Coords : <a href="NewPascal.Base.html#DoubleArray">DoubleArray</a>) : <a href="NewPascal.Base.html#int">Int</a>;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -60,7 +62,7 @@ The PathIterator interface provides the mechanism for objects that implement the
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="WindingRule"></span><code>function <strong>WindingRule</strong>: <a href="NewPascal.Base.html#Int">Int</a>;</code></td>
+<td class="itemcode"><span id="WindingRule"></span><code>function <strong>WindingRule</strong>: <a href="NewPascal.Base.html#int">Int</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -99,7 +101,7 @@ Moves the iterator to the next segment of the path forwards along the primary di
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="CurrentSegment"></span><code>function <strong>CurrentSegment</strong>(Coords : <a href="NewPascal.Base.html#DoubleArray">DoubleArray</a>) : <a href="NewPascal.Base.html#Int">Int</a>;</code></td>
+<td class="itemcode"><span id="CurrentSegment"></span><code>function <strong>CurrentSegment</strong>(Coords : <a href="NewPascal.Base.html#DoubleArray">DoubleArray</a>) : <a href="NewPascal.Base.html#int">Int</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>

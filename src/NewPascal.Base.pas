@@ -11,66 +11,82 @@ uses
   ;
 
 const
-  //an alias to @Nil constant
-  Null = Nil;
+  //an alias to @nil constant
+  null = nil;
 
 type
-  //an alias to @Italic(ShortInt) integer type
-  SByte = ShortInt;
+  //Signed 8-bit integer. @br
+  //An alias to @Italic(shortint) integer type. @br
+  //See @url(https://www.freepascal.org/docs-html/current/ref/refsu4.html) and @url(https://wiki.freepascal.org/Integer).
+  sbyte = shortint;
 
-  //an alias to @Italic(SmallInt) integer type
-  Short = SmallInt;
+  //Signed 16-bit integer. @br
+  //An alias to @Italic(smallint) integer type. @br
+  //See @url(https://www.freepascal.org/docs-html/current/ref/refsu4.html) and @url(https://wiki.freepascal.org/Integer).
+  short = smallint;
 
-  //an alias to @Italic(Word) integer type
-  UShort = Word;
+  //Unsigned 16-bit integer. @br
+  //An alias to @Italic(word) integer type. @br
+  //See @url(https://www.freepascal.org/docs-html/current/ref/refsu4.html) and @url(https://wiki.freepascal.org/Integer).
+  ushort = word;
 
-  //an alias to @Italic(Int32) integer type
-  Int = Int32;
+  //Signed 32-bit integer. @br
+  //An alias to @Italic(int32) integer type. @br
+  //See @url(https://www.freepascal.org/docs-html/current/ref/refsu4.html) and @url(https://wiki.freepascal.org/Integer).
+  int = int32;
 
-  //an alias to @Italic(LongWord) integer type
-  UInt = LongWord;
+  //Unsigned 32-bit integer. @br
+  //An alias to @Italic(longword) integer type. @br
+  //See @url(https://www.freepascal.org/docs-html/current/ref/refsu4.html) and @url(https://wiki.freepascal.org/Integer).
+  uint = longword;
 
-  //an alias to @Italic(Int64) integer type
-  Long = Int64;
+  //Signed 64-bit integer. @br
+  //An alias to @Italic(int64) integer type. @br
+  //See @url(https://www.freepascal.org/docs-html/current/ref/refsu4.html) and @url(https://wiki.freepascal.org/Integer).
+  long = int64;
 
-  //an alias to @Italic(QWord) integer type
-  ULong = QWord;
+  //Unsigned 64-bit integer. @br
+  //An alias to @Italic(qword) integer type. @br
+  //See @url(https://www.freepascal.org/docs-html/current/ref/refsu4.html) and @url(https://wiki.freepascal.org/Integer).
+  ulong = qword;
 
-  //an alias to @Italic(Single) floating type
-  Float = Single;
+  //Single-precision floating-point number. @br
+  //An alias to @Italic(single) floating type. @br
+  //See @url(https://www.freepascal.org/docs-html/current/ref/refsu5.html) and @url(https://wiki.freepascal.org/IEEE_754_formats).
+  float = single;
 
-  //an alias to @Bold(array of) @Italic(Byte)
-  ByteArray = array of Byte;
+  //an alias to @Bold(array of) @Italic(byte)
+  ByteArray = array of byte;
 
-  //an alias to @Bold(array of) @Italic(SByte)
-  SByteArray = array of SByte;
+  //an alias to @Bold(array of) @Italic(sbyte)
+  SByteArray = array of sbyte;
 
-  //an alias to @Bold(array of) @Italic(Short)
-  ShortArray = array of Short;
+  //an alias to @Bold(array of) @Italic(short)
+  ShortArray = array of short;
 
-  //an alias to @Bold(array of) @Italic(UShort)
-  UShortArray = array of UShort;
+  //an alias to @Bold(array of) @Italic(ushort)
+  UShortArray = array of ushort;
 
-  //an alias to @Bold(array of) @Italic(Int)
-  IntArray = array of Int;
+  //an alias to @Bold(array of) @Italic(int)
+  IntArray = array of int;
 
-  //an alias to @Bold(array of) @Italic(UInt)
-  UIntArray = array of UInt;
+  //an alias to @Bold(array of) @Italic(uint)
+  UIntArray = array of uint;
 
-  //an alias to @Bold(array of) @Italic(Long)
-  LongArray = array of Long;
+  //an alias to @Bold(array of) @Italic(long)
+  LongArray = array of long;
 
-  //an alias to @Bold(array of) @Italic(ULong)
-  ULongArray = array of ULong;
+  //an alias to @Bold(array of) @Italic(ulong)
+  ULongArray = array of ulong;
 
-  //an alias to @Bold(array of) @Italic(Double)
-  DoubleArray = array of Double;
+  //an alias to @Bold(array of) @Italic(double)
+  DoubleArray = array of double;
 
-  //an alias to @Bold(array of) @Italic(Float)
-  FloatArray = array of Float;
+  //an alias to @Bold(array of) @Italic(float)
+  FloatArray = array of float;
 
-  //an alias to @Bold(array of) @Italic(Currency)
-  CurrencyArray = array of Currency;
+  //an alias to @Bold(array of) @Italic(currency)
+  CurrencyArray = array of currency;
 
   Objct = class;
 
@@ -98,7 +114,7 @@ type
     constructor Create(ResString : PString; const Args : array of const); overload;
     constructor Create(const msg : string; AHelpContext : Int); overload;
     constructor Create(const msg : string; const Args : array of const; AHelpContext : Int); overload;
-    constructor Create(ResString: PString; AHelpContext : Int); overload;
+    constructor Create(ResString : PString; AHelpContext : Int); overload;
     constructor Create(ResString : PString; const Args: array of const; AHelpContext : Int); overload;
     property Message : string read fmessage;
   end;
@@ -222,7 +238,7 @@ begin
   fmessage := Format(msg,args);
 end;
 
-constructor Throwable.Create(ResString: PString);
+constructor Throwable.Create(ResString : PString);
 begin
  inherited Create;
  fmessage := ResString^;
