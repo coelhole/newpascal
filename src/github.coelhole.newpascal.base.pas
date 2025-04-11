@@ -115,14 +115,44 @@ type
   //an alias to @Bold(array of) @Italic(comp)
   CompArray = array of comp;
 
+  CharArray = array of char;
+
+  WideCharArray = array of widechar;
+
+  UnicodeCharArray = array of unicodechar;
+
+  ShortStringArray = array of shortstring;
+
+  ANSIStringArray = array of ansistring;
+
+  StringArray = array of string;
+
+  WideStringArray = array of widestring;
+
+  UnicodeStringArray = array of unicodestring;
+
+  ObjectArray = array of TObject;
+
   Objct = class;
 
+  IObjct = interface
+    ['{307B4AE3-8689-4732-8FA5-7B98844BC864}']
+    function fieldAddress(const name : shortstring) : pointer;
+    function equals(obj : TObject) : boolean;
+    function toString : ansistring;
+    function getHashCode : ptrint;
+    property hashCode : ptrint read getHashCode;
+    procedure defaultHandlerStr( var message );
+    procedure dispatch( var message );
+    procedure dispatchStr( var message );
+  end;
+
   Cloneable = interface
-    ['{98649980-45DA-459C-A6B1-0B6D6C506C93}']
+    ['{35337922-7470-4E24-8609-5058EEAB0FE5}']
     function clone : Objct;
   end;
 
-  Objct = class(TInterfacedObject)
+  Objct = class(TInterfacedObject,IObjct)
   protected
     function clone : Objct; virtual;
   public

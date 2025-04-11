@@ -47,7 +47,7 @@ const
     This form of curve is commonly known as a Bézier curve.
   }
   SEG_CUBICTO    : int = 3;
-  //The segment type constant that specifies that the preceding subpath should be closed by appending a line segment back to the point corresponding to the most recent SEG_MOVETO.
+  //The segment type constant that specifies that the preceding subpath should be closed by appending a line segment back to the point corresponding to the most recent @link(SEG_MOVETO).
   SEG_CLOSE      : int = 4;
 
 type

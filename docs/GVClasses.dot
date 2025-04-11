@@ -1,6 +1,8 @@
 DiGraph Classes {
   "Cloneable" -> "IInterface"
   "Cloneable" [href="github.coelhole.newpascal.base.Cloneable.html"]
+  "IObjct" -> "IInterface"
+  "IObjct" [href="github.coelhole.newpascal.base.IObjct.html"]
   "PathIterator" -> "IInterface"
   "PathIterator" [href="github.coelhole.newpascal.awt.geom.PathIterator.html"]
   "Objct" -> "TInterfacedObject"
