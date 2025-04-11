@@ -65,9 +65,9 @@ Item_0=src
 
 [Files]
 Count=3
-Item_0=src\NewPascal.Base.pas
-Item_1=src\NewPascal.GUI.Geom.pas
-Item_2=src\NewPascal.IO.Console.pas
+Item_0=src\github.coelhole.newpascal.awt.geom.pas
+Item_1=src\github.coelhole.newpascal.base.pas
+Item_2=src\github.coelhole.newpascal.io.Console.pas
 
 [AdditionalFiles]
 Count=0

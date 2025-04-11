@@ -1,13 +1,8 @@
 DiGraph Uses {
-  "NewPascal.Base" -> "Classes"
-  "NewPascal.Base" -> "SysUtils"
-  "NewPascal.Base" [href="NewPascal.Base.html"]
-  "NewPascal.GUI.Geom" -> "Classes"
-  "NewPascal.GUI.Geom" -> "SysUtils"
-  "NewPascal.GUI.Geom" -> "NewPascal.Base"
-  "NewPascal.GUI.Geom" [href="NewPascal.GUI.Geom.html"]
-  "NewPascal.IO.Console" -> "Classes"
-  "NewPascal.IO.Console" -> "SysUtils"
-  "NewPascal.IO.Console" -> "NewPascal.Base"
-  "NewPascal.IO.Console" [href="NewPascal.IO.Console.html"]
+  "github.coelhole.newpascal.awt.geom" -> "github.coelhole.newpascal.base"
+  "github.coelhole.newpascal.awt.geom" [href="github.coelhole.newpascal.awt.geom.html"]
+  "github.coelhole.newpascal.base" -> "Classes"
+  "github.coelhole.newpascal.base" [href="github.coelhole.newpascal.base.html"]
+  "github.coelhole.newpascal.io.Console" -> "github.coelhole.newpascal.base"
+  "github.coelhole.newpascal.io.Console" [href="github.coelhole.newpascal.io.Console.html"]
 }

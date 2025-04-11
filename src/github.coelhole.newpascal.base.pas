@@ -1,5 +1,5 @@
 //Provides fundamental classes to NewPascal programming library.
-unit NewPascal.Base;
+unit github.coelhole.newpascal.base;
 
 {$mode ObjFPC}{$H+}
 
@@ -7,7 +7,6 @@ interface
 
 uses
   Classes
-  ,SysUtils
   ;
 
 const
@@ -120,31 +119,32 @@ type
 
   Cloneable = interface
     ['{98649980-45DA-459C-A6B1-0B6D6C506C93}']
-    function Clone : Objct;
+    function clone : Objct;
   end;
 
   Objct = class(TInterfacedObject)
   protected
-    function Clone : Objct; virtual;
+    function clone : Objct; virtual;
   public
-    function ToString : AnsiString; override;
+    function toString : string; override;
   end;
   ObjctClass = class of Objct;
 
   Throwable = class(Objct)
   private
-    fmessage : string;
-    fhelpcontext : Int;
+    fMessage : string;
+    fHelpContext : int;
   public
-    constructor Create(const msg : string = ''); overload;
-    constructor Create(const msg : string; const args : array of const); overload;
-    constructor Create(ResString : PString); overload;
-    constructor Create(ResString : PString; const Args : array of const); overload;
-    constructor Create(const msg : string; AHelpContext : Int); overload;
-    constructor Create(const msg : string; const Args : array of const; AHelpContext : Int); overload;
-    constructor Create(ResString : PString; AHelpContext : Int); overload;
-    constructor Create(ResString : PString; const Args: array of const; AHelpContext : Int); overload;
-    property Message : string read fmessage;
+    constructor create(const msg : string = ''); overload;
+    constructor create(const msg : string; const args : array of const); overload;
+    constructor create(resString : PString); overload;
+    constructor create(resString : PString; const args : array of const); overload;
+    constructor create(const msg : string; hlpContxt : int); overload;
+    constructor create(const msg : string; const args : array of const; hlpContxt : int); overload;
+    constructor create(resString : PString; hlpContxt : int); overload;
+    constructor create(resString : PString; const args: array of const; hlpContxt : int); overload;
+    property message : string read fMessage;
+    property helpContext : int read fHelpContext;
   end;
   ThrowableClass = class of Throwable;
 
@@ -184,126 +184,136 @@ type
   NoSuchMethodException = class(ReflectiveOperationException);
   NoSuchMethodExceptionClass = class of NoSuchMethodException;
 
-operator := (obj : Objct) str : String;
-operator Explicit(obj : Objct) str : String;
-operator + (obj : Objct; mystr : String) str : String;
-operator + (mystr : String; obj : Objct) str : String;
-operator + (myint : Long; mystr : String) str : String;
-operator + (mystr : String; myint : Long) str : String;
-operator + (myuint : ULong; mystr : String) str : String;
-operator + (mystr : String; myuint : ULong) str : String;
+  UnsupportedOperationException = class(RuntimeException);
+  UnsupportedOperationExceptionClass = class of UnsupportedOperationException;
+
+operator := (myObject : TObject) stringResult : string;
+operator explicit(myObject : TObject) stringResult : string;
+operator + (myObject : TObject; myString : string) stringResult : string;
+operator + (myString : string; myObject : TObject) stringResult : string;
+operator + (myInteger : long; myString : string) stringResult : string;
+operator + (myString : string; myInteger : long) stringResult : string;
+operator + (myUnsignedInteger : ulong; myString : string) stringResult : string;
+operator + (myString : string; myUnsignedInteger : ulong) stringResult : string;
 
 implementation
 
-operator := (obj : Objct) str : String;
+uses
+  SysUtils;
+
+operator := (myObject : TObject) stringResult : string;
 begin
-  str := 'null';
-  if Assigned(obj) then
-     str := obj.ToString;
+  stringResult := 'null';
+  if assigned(myObject) then
+     stringResult := myObject.toString;
 end;
 
-operator Explicit (obj : Objct) str : String;
+operator explicit (myObject : TObject) stringResult : string;
 begin
-  str := 'null';
-  if Assigned(obj) then
-     str := obj.ToString;
+  stringResult := 'null';
+  if assigned(myObject) then
+     stringResult := myObject.toString;
 end;
 
-operator + (obj : Objct; mystr : ansistring) str : AnsiString;
+operator + (myObject : TObject; myString : string) stringResult : string;
 begin
-  str := 'null' + mystr;
-  if Assigned(obj) then
-     str := obj.ToString + mystr;
+  stringResult := 'null' + myString;
+  if assigned(myObject) then
+     stringResult := myObject.toString + myString;
 end;
 
-operator + (mystr : String; obj : Objct) str : String;
+operator + (myString : string; myObject : TObject) stringResult : string;
 begin
-  str := mystr + 'null';
-  if Assigned(obj) then
-     str := mystr + obj.ToString;
+  stringResult := myString + 'null';
+  if assigned(myObject) then
+     stringResult := myString + myObject.toString;
 end;
 
-operator + (myint : Long; mystr : String) str : String;
+operator + (myInteger : long; myString : string) stringResult : string;
 begin
-  str := IntToStr(myint) + mystr;
+  stringResult := intToStr(myInteger) + myString;
 end;
 
-operator + (mystr : String; myint : Long) str : String;
+operator + (myString : string; myInteger : long) stringResult : string;
 begin
-  str := mystr + IntToStr(myint);
+  stringResult := myString + intToStr(myInteger);
 end;
 
-operator + (myuint : ULong; mystr : String) str : String;
+operator + (myUnsignedInteger : ulong; myString : string) stringResult : string;
 begin
-  str := IntToStr(myuint) + mystr;
+  stringResult := intToStr(myUnsignedInteger) + myString;
 end;
 
-operator + (mystr : String; myuint : ULong) str : String;
+operator + (myString : string; myUnsignedInteger : ulong) stringResult : string;
 begin
-  str := mystr + IntToStr(myuint);
+  stringResult := myString + intToStr(myUnsignedInteger);
 end;
 
-function Objct.ToString:AnsiString;
+function Objct.toString : string;
 begin
-  Result := Format('%s@%s',[QualifiedClassName,LowerCase(HexStr(GetHashCode,8))]);
+  result := format('%s@%s', [qualifiedClassName, lowerCase(hexStr(getHashCode, 8))]);
 end;
 
-function Objct.Clone:Objct;
+function Objct.clone : Objct;
 begin
-  Result := Objct(Null);
-  raise CloneNotSupportedException.Create;
+  result := Objct(null);
+  raise CloneNotSupportedException.create;
 end;
 
-constructor Throwable.Create(const msg : string = '');
+constructor Throwable.create(const msg : string = '');
 begin
-  inherited Create;
-  fmessage := msg;
+  inherited create;
+  fMessage := msg;
+  fHelpContext :=0 ;
 end;
 
-constructor Throwable.Create(const msg : string; const args : array of const);
+constructor Throwable.create(const msg : string; const args : array of const);
 begin
-  inherited Create;
-  fmessage := Format(msg,args);
+  inherited create;
+  fMessage := format(msg, args);
+  fHelpContext := 0;
 end;
 
-constructor Throwable.Create(ResString : PString);
+constructor Throwable.create(resString : PString);
 begin
- inherited Create;
- fmessage := ResString^;
+ inherited create;
+ fMessage := resString^;
+ fHelpContext := 0;
 end;
 
-constructor Throwable.Create(ResString : PString; const Args : array of const);
+constructor Throwable.create(resString : PString; const args : array of const);
 begin
- inherited Create;
- fmessage := Format(ResString^,args);
+ inherited create;
+ fMessage := format(resString^, args);
+ fHelpContext := 0;
 end;
 
-constructor Throwable.Create(const msg : string; AHelpContext : Int);
+constructor Throwable.create(const msg : string; hlpContxt : int);
 begin
- inherited Create;
- fmessage := msg;
- fhelpcontext := AHelpContext;
+ inherited create;
+ fMessage := msg;
+ fHelpContext := hlpContxt;
 end;
 
-constructor Throwable.Create(const msg : string; const Args : array of const; AHelpContext : Int);
+constructor Throwable.create(const msg : string; const args : array of const; hlpContxt : int);
 begin
-  inherited Create;
-  fmessage := Format(msg,args);
-  fhelpcontext := AHelpContext;
+  inherited create;
+  fMessage := format(msg, args);
+  fHelpContext := hlpContxt;
 end;
 
-constructor Throwable.Create(ResString : PString; AHelpContext : Int);
+constructor Throwable.create(resString : PString; hlpContxt : int);
 begin
-  inherited Create;
-  fmessage := ResString^;
-  fhelpcontext := AHelpContext;
+  inherited create;
+  fMessage := resString^;
+  fHelpContext := hlpContxt;
 end;
 
-constructor Throwable.Create(ResString : PString; const Args : array of const; AHelpContext : Int);
+constructor Throwable.create(resString : PString; const args : array of const; hlpContxt : int);
 begin
-  inherited Create;
-  fmessage := Format(ResString^,args);
-  fhelpcontext := AHelpContext;
+  inherited create;
+  fMessage := format(resString^, args);
+  fHelpContext := hlpContxt;
 end;
 
 end.
